@@ -27,8 +27,5 @@ namespace WarGame
     void Board::move(unsigned int player_number, std::pair<int,int> source, MoveDIR direction) { ; }
 
     /* has soldiers */
-    bool Board::has_soldiers(unsigned int player_number) const 
-    {
-        return true; 
-    }
+    bool Board::has_soldiers(unsigned int player_number) const { return false; }
 }

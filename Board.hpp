@@ -25,7 +25,7 @@ namespace WarGame
 
             Board() { ; }
 
-            ~Board(){ ; }
+            ~Board(){ board.clear(); }
 
             Board(unsigned int numRows, unsigned int numCols) : 
             board(numRows, std::vector<Soldier*>(numCols, nullptr)) {}
