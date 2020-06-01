@@ -1,5 +1,7 @@
 // Author - Dvir Sadon
 #include "Soldier.hpp"
+#define MAX_HEALTHFS 100
+#define DPAFS 10
 #pragma once 
 
 namespace WarGame
@@ -9,8 +11,8 @@ namespace WarGame
         public:
             int dpa;
 
-            FootSoldier(){ this->hp = 100; this->dpa = 10; }
-            FootSoldier(int player) { this->player = player;}
+            FootSoldier(){ this->hp = MAX_HEALTHFS; this->dpa = DPAFS; this->maxHP = MAX_HEALTHFS; }
+            FootSoldier(int player) { this->player = player; this->hp = MAX_HEALTHFS; this->dpa = DPAFS; this->maxHP = MAX_HEALTHFS; }
 
             void MAction(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> location) override
             {
