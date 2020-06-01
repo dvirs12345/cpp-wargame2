@@ -4,7 +4,7 @@
  * @author Dvir Sadon
  * @since  2020-05
  */
-
+#pragma once
 #include <string>
 #include <vector>
 #include <stdexcept>
@@ -12,7 +12,6 @@
 
 namespace WarGame 
 {
-
     class Board 
     {
         private:

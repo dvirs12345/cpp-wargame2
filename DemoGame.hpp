@@ -9,6 +9,7 @@
  */
 
 #include "Board.hpp"
+using namespace std;
 
 namespace WarGame {
 	class DemoGame {
@@ -26,7 +27,7 @@ namespace WarGame {
 		/**
 		 * This function runs a sample play of the game and returns the winner (1 or 2, or 0 in case of tie).
 		 */
-		uint play(); 
+		unsigned int play(); 
 
  		/**
 		 * The destructor deletes the soldiers from the board.
