@@ -2,7 +2,7 @@
 #include "Soldier.hpp"
 #include "Board.hpp"
 #define MAX_HEALTHSC 120
-#define DPASC 0
+#define DPASC 100
 #pragma once
 using namespace std;
 

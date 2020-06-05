@@ -29,10 +29,10 @@ namespace WarGame
         Soldier* sol = (*this)[{source.first, source.second}];
 
         // Check if within the boundries of the board
-        if((source.first <= 0 && direction == Up) || (source.second <= 0 && direction == Left))
+        if((source.first <= 0 && direction == Down) || (source.second <= 0 && direction == Left))
             throw std::invalid_argument("Invalid Destination");
         
-        else if((source.first >= board.size()-1 && direction == Down) || (source.second >= board[0].size() && direction == Right))
+        else if((source.first >= board.size()-1 && direction == Up) || (source.second >= board[0].size() && direction == Right))
             throw std::invalid_argument("Invalid Destination");
 
         // Check if there is A soldier in the source position
@@ -44,10 +44,10 @@ namespace WarGame
             throw std::invalid_argument("The soldier is not the player's");
         
         // Set the value of the new 
-        if(direction == Down)
+        if(direction == Up)
             dest = make_pair(source.first+1, source.second);
         
-        else if(direction == Up)
+        else if(direction == Down)
             dest = make_pair(source.first-1, source.second); 
         
         else if(direction == Left)
@@ -58,11 +58,13 @@ namespace WarGame
 
         Soldier* sol2 = (*this)[{dest.first, dest.second}];
         // Check if destination is full
-        if(sol2 == nullptr)
+        if(sol2 != nullptr)
             throw std::invalid_argument("Destination is already full");
 
+        // Move the Soldier and start its action
         (*this)[source] = nullptr;
         (*this)[dest] = sol;
+        //cout << "Starting Shooting" << endl;
         sol->MAction(board, dest);
     }
 
