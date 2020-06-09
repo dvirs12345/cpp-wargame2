@@ -16,8 +16,11 @@ namespace WarGame
             void MAction(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> dest_location) override 
             {
                 int my_player = board[dest_location.first][dest_location.second]->player;
-                
-                
+                for(int i = dest_location.first-1; i < dest_location.second+1; i++)
+                    for (int j = dest_location.second-1; j < dest_location.second+1; j++)
+                        if(i >=0 && i < board.size() && j >= 0 && j < board[0].size()) // If within the board
+                            if (board[i][j] != nullptr)
+                                board[i][j]->hp = board[i][j]->maxHP; // Heal to full
             }
     };
 }

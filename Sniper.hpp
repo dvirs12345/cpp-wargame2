@@ -20,7 +20,8 @@ namespace WarGame
             {
                 auto close = strongest(board, board[dest_location.first][dest_location.second]->player, dest_location);
                 board[close.first][close.second]->hp = board[close.first][close.second]->hp - this->dpa; // Shoot!
-                //(*close)->hp = (*close)->hp - this->dpa; 
+                if(board[close.first][close.second]->hp <= 0)
+                    board[close.first][close.second] = nullptr; 
             }
         
         private:
