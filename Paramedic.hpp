@@ -10,8 +10,8 @@ namespace WarGame
     class Paramedic : public Soldier 
     {
         public:
-            Paramedic(){ this->hp = MAX_HPP; this->maxHP = MAX_HPP; }
-            Paramedic(int player) { this->player = player; this->hp = MAX_HPP; this->maxHP = MAX_HPP; }
+            Paramedic(){ this->hp = MAX_HPP; this->maxHP = MAX_HPP; this->type = 3; }
+            Paramedic(int player) { this->player = player; this->hp = MAX_HPP; this->maxHP = MAX_HPP; this->type = 3; }
             
             void MAction(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> dest_location) override 
             {

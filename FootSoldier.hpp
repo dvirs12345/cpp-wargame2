@@ -12,8 +12,8 @@ namespace WarGame
         public:
             int dpa;
 
-            FootSoldier(){ this->hp = MAX_HEALTHFS; this->dpa = DPAFS; this->maxHP = MAX_HEALTHFS; }
-            FootSoldier(int player) { this->player = player; this->hp = MAX_HEALTHFS; this->dpa = DPAFS; this->maxHP = MAX_HEALTHFS; }
+            FootSoldier(){ this->hp = MAX_HEALTHFS; this->dpa = DPAFS; this->maxHP = MAX_HEALTHFS; this->type = 1; }
+            FootSoldier(int player) { this->player = player; this->hp = MAX_HEALTHFS; this->dpa = DPAFS; this->maxHP = MAX_HEALTHFS; this->type = 1; }
 
             void MAction(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> dest_location) override
             {

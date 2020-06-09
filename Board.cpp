@@ -32,7 +32,7 @@ namespace WarGame
         if((source.first <= 0 && direction == Down) || (source.second <= 0 && direction == Left))
             throw std::invalid_argument("Invalid Destination");
         
-        else if((source.first >= board.size()-1 && direction == Up) || (source.second >= board[0].size() && direction == Right))
+        else if((source.first >= board.size()-1 && direction == Up) || (source.second >= board[0].size()-1 && direction == Right))
             throw std::invalid_argument("Invalid Destination");
 
         // Check if there is A soldier in the source position

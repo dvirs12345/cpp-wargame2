@@ -17,6 +17,7 @@ namespace WarGame
             int player;
             int hp;
             int maxHP;
+            int type;
 
             Soldier(){ ; }
             Soldier(int player, int hp, int maxHP){ this->player = player; this->hp = hp; this->maxHP = maxHP; }

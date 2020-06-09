@@ -36,7 +36,7 @@ TEST_CASE("Test [] Operators")  // 10
 
 TEST_CASE("Test move") // 20
 {
-    /*
+    
     Board board(8, 8);
     board[{0,1}] = new FootSoldier(1);
     board[{0,3}] = new FootCommander(1);
@@ -83,7 +83,7 @@ TEST_CASE("Test move") // 20
     CHECK(board[{1,0}]->player == 1);
     board.move(1, {1,0}, Board::Up);
     CHECK(board[{0,0}]->player == 1);
-    */
+    
 }
 
 TEST_CASE("Test has_soldiers") // 20

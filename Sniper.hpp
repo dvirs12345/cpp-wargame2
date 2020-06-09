@@ -13,8 +13,8 @@ namespace WarGame
         public:
             int dpa;
 
-            Sniper(){ this->hp = MAX_HEALTHS; this->dpa = DPAS; this->maxHP = MAX_HEALTHS; }
-            Sniper(int player) { this->player = player;  this->hp = MAX_HEALTHS; this->dpa = DPAS; this->maxHP = MAX_HEALTHS; }
+            Sniper(){ this->hp = MAX_HEALTHS; this->dpa = DPAS; this->maxHP = MAX_HEALTHS; this->type = 2; }
+            Sniper(int player) { this->player = player;  this->hp = MAX_HEALTHS; this->dpa = DPAS; this->maxHP = MAX_HEALTHS; this->type = 2; }
 
             void MAction(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> dest_location) override
             {
